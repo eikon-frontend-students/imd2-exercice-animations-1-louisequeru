@@ -157,22 +157,30 @@ video {
 }
 
 @keyframes movingpaddle1 {
-  from {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  80% {
     transform: translateY(0px);
   }
 
-  to {
+  100% {
     transform: translateY(-100px);
   }
 }
 
 @keyframes movingpaddle2 {
-  from {
+  0% {
     transform: translateY(0);
   }
 
-  to {
+  20% {
     transform: translateY(100);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -200,9 +208,9 @@ video {
 }
 
 .pong-paddle:nth-child(1) {
-  animation: movingpaddle1 5s ease-out 1s alternate infinite;
+  animation: movingpaddle1 10s linear infinite;
 }
 
 .pong-paddle:nth-child(3) {
-  animation: movingpaddle2 5s ease-in 7s alternate infinite;
+  animation: movingpaddle2 10s linear 2s infinite;
 }
